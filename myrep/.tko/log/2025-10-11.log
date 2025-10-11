@@ -2,3 +2,14 @@
 2025-10-11 12:40:29, MOVE, v:1, k:poo@chinela, mode:PICK
 2025-10-11 12:40:30, EXEC, v:1, k:poo@chinela, mode:FREE, size:21
 2025-10-11 12:40:44, MOVE, v:1, k:poo@chinela, mode:BACK
+2025-10-11 12:42:29, MOVE, v:1, k:poo@camisa, mode:DOWN
+2025-10-11 12:42:50, MOVE, v:1, k:poo@camisa, mode:PICK
+2025-10-11 12:55:19, EXEC, v:1, k:poo@camisa, mode:FREE, size:22
+2025-10-11 12:59:04, EXEC, v:1, k:poo@camisa, mode:LOCK, rate:0
+2025-10-11 12:59:06, MOVE, v:1, k:poo@camisa, mode:BACK
+2025-10-11 12:59:07, MOVE, v:1, k:poo@camisa, mode:PICK
+2025-10-11 12:59:19, EXEC, v:1, k:poo@camisa, mode:FREE
+2025-10-11 13:00:27, MOVE, v:1, k:poo@camisa, mode:BACK
+2025-10-11 13:00:28, MOVE, v:1, k:poo@camisa, mode:PICK
+2025-10-11 13:00:29, EXEC, v:1, k:poo@camisa, mode:FREE, size:22
+2025-10-11 13:00:36, MOVE, v:1, k:poo@camisa, mode:BACK
