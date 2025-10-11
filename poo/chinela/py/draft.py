@@ -5,7 +5,7 @@ class Chinela:
     def getSize(self) -> int:
         return self.__tamanho
     def setSize(self, valor: int):
-        if valor > 19 or valor < 51:
+        if valor > 19 and valor < 51:
             self.__tamanho = valor
             return
         else:
@@ -14,6 +14,7 @@ class Chinela:
 def main():
     chinela = Chinela()
     while chinela.getSize() == 0:
+        print("digite seu tamanho de chinela")
         tamanho = int(input(": "))
         chinela.setSize(tamanho)
     print("parabens, voce comprou uma chinela de tamanho ", chinela.getSize())

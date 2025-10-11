@@ -7,8 +7,18 @@
         },
         {
             "label": "2025-10-11_12-13-47",
-            "content": "class Chinela:\n    def __init__(self):\n        self.__tamanho = 0\n\n    def getSize(self) -> int:\n        return self.__tamanho\n    def setSize(self, valor: int):\n        if valor > 19 or valor < 51:\n            self.__tamanho = valor\n            return\n        else:\n            print(\"fail: o valor digitado nao corresponde a um par de chinela\")\n\ndef main():\n    chinela = Chinela()\n    while chinela.getSize() == 0:\n        tamanho = int(input(\": \"))\n        chinela.setSize(tamanho)\n    print(\"parabens, voce comprou uma chinela de tamanho \", chinela.getSize())\nmain()",
+            "content": "@@ -415,55 +415,8 @@\n  0:%0A\n-        print(%22digite seu tamanho de chinela%22)%0A\n     \n",
             "lines": "20"
+        },
+        {
+            "label": "2025-10-11_12-18-01",
+            "content": "@@ -181,11 +181,10 @@\n  19 \n-and\n+or\n  val\n",
+            "lines": "21"
+        },
+        {
+            "label": "2025-10-11_12-20-18",
+            "content": "class Chinela:\n    def __init__(self):\n        self.__tamanho = 0\n\n    def getSize(self) -> int:\n        return self.__tamanho\n    def setSize(self, valor: int):\n        if valor > 19 and valor < 51:\n            self.__tamanho = valor\n            return\n        else:\n            print(\"fail: o valor digitado nao corresponde a um par de chinela\")\n\ndef main():\n    chinela = Chinela()\n    while chinela.getSize() == 0:\n        print(\"digite seu tamanho de chinela\")\n        tamanho = int(input(\": \"))\n        chinela.setSize(tamanho)\n    print(\"parabens, voce comprou uma chinela de tamanho \", chinela.getSize())\nmain()",
+            "lines": "21"
         }
     ]
 }
