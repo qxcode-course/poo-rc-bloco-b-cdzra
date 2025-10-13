@@ -1,0 +1,74 @@
+{
+    "patches": [
+        {
+            "label": "2025-10-13_11-45-52",
+            "content": "@@ -660,11 +660,11 @@\n ize:\n- (%7B\n+%22, \n roup\n@@ -676,11 +676,10 @@\n Size\n-%7D)%22\n+()\n )%0A  \n",
+            "lines": "34"
+        },
+        {
+            "label": "2025-10-13_11-47-18",
+            "content": "@@ -661,11 +661,10 @@\n ze: \n-%22,\n (\n+%7B\n roup\n@@ -676,11 +676,11 @@\n Size\n-())\n+%7D)%22\n )%0A  \n",
+            "lines": "34"
+        },
+        {
+            "label": "2025-10-13_11-49-26",
+            "content": "@@ -661,12 +661,11 @@\n ze: \n-()\n %22,\n+(\n roup\n@@ -676,16 +676,17 @@\n tSize())\n+)\n %0A       \n",
+            "lines": "34"
+        },
+        {
+            "label": "2025-10-13_11-50-48",
+            "content": "@@ -656,16 +656,17 @@\n t(%22size:\n+ \n ()%22,roup\n",
+            "lines": "34"
+        },
+        {
+            "label": "2025-10-13_11-51-30",
+            "content": "@@ -660,11 +660,12 @@\n ize:\n- (%22\n+()%22,\n roup\n@@ -679,11 +679,8 @@\n ze()\n-%22)%22\n )%0A  \n",
+            "lines": "34"
+        },
+        {
+            "label": "2025-10-13_11-52-53",
+            "content": "@@ -662,11 +662,9 @@\n e: (\n-)%22,\n+%22\n roup\n@@ -674,16 +674,19 @@\n etSize()\n+%22)%22\n )%0A      \n",
+            "lines": "34"
+        },
+        {
+            "label": "2025-10-13_11-53-22",
+            "content": "@@ -602,34 +602,32 @@\n   break%0A        \n-el\n if args%5B0%5D == %22s\n@@ -686,18 +686,35 @@\n         \n-el\n+    return%0A        \n if args%5B\n",
+            "lines": "34"
+        },
+        {
+            "label": "2025-10-13_11-57-12",
+            "content": "@@ -302,33 +302,33 @@\n rint(%22fail: \n-V\n+v\n alor inv\n %C3%A1lido, tente\n@@ -307,33 +307,33 @@\n %22fail: valor inv\n-%C3%A1\n+a\n lido, tente PP, \n@@ -832,17 +832,17 @@\n il: \n-V\n+v\n alor inv\n %C3%A1lid\n@@ -841,9 +841,9 @@\n  inv\n-%C3%A1\n+a\n lido\n",
+            "lines": "33"
+        },
+        {
+            "label": "2025-10-13_11-57-51",
+            "content": "@@ -656,17 +656,16 @@\n int(\n-f\n %22size: (\n %7Brou\n@@ -664,9 +664,11 @@\n e: (\n-%7B\n+)%22,\n roup\n@@ -682,11 +682,8 @@\n ze()\n-%7D)%22\n )%0A  \n",
+            "lines": "33"
+        },
+        {
+            "label": "2025-10-13_11-59-25",
+            "content": "@@ -684,16 +684,8 @@\n )%7D)%22\n-, end=%22%22\n )%0A  \n",
+            "lines": "33"
+        },
+        {
+            "label": "2025-10-13_12-01-10",
+            "content": "@@ -680,16 +680,24 @@\n ize()%7D)%22\n+, end=%22%22\n )%0A      \n",
+            "lines": "33"
+        },
+        {
+            "label": "2025-10-13_12-02-38",
+            "content": "@@ -469,16 +469,8 @@\n line\n-, end=%22%22\n )%0A  \n",
+            "lines": "33"
+        },
+        {
+            "label": "2025-10-13_12-03-04",
+            "content": "@@ -465,16 +465,24 @@\n %22 + line\n+, end=%22%22\n )%0A      \n",
+            "lines": "33"
+        },
+        {
+            "label": "2025-10-13_12-04-22",
+            "content": "class Roupa:\n    def __init__(self):\n        self.__tamanho: str = \"\"\n\n    def getSize(self) -> str:\n        return self.__tamanho\n    \n    def setSize(self,valor: str):\n        if valor in [\"PP\",\"P\",\"M\",\"G\",\"GG\",\"XG\"]:\n            self.__tamanho = valor\n            return\n        else:\n            print(\"fail: Valor inv\u00e1lido, tente PP, P, M, G, GG ou XG\")\n\ndef main():\n    roupa = Roupa()\n    while roupa.getSize() == \"\":\n        line = input()\n        print(\"$\" + line)\n        args: list[str] = line.split()\n\n        if len(args) == 0:\n            continue\n        if args[0] == \"end\":\n            break\n        elif args[0] == \"show\":\n            print(f\"size: ({roupa.getSize()})\")\n        elif args[0] == \"size\":\n            if len(args) > 1:\n                roupa.setSize(args[1])\n            else:\n                print(\"fail: Valor inv\u00e1lido, tente PP, P, M, G, GG ou XG\")\nmain()",
+            "lines": "33"
+        }
+    ]
+}
