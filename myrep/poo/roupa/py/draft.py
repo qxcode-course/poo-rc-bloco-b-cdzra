@@ -2,8 +2,8 @@ class Roupa:
     def __init__(self):
         self.__tamanho: str = ""
 
-    def getSize(self) -> str:
-        return self.__tamanho
+    def __str__(self) -> str:
+        return f"size: ({self.__tamanho})"
     
     def setSize(self,valor: str):
         if valor in ["PP","P","M","G","GG","XG"]:
@@ -14,7 +14,7 @@ class Roupa:
 
 def main():
     roupa = Roupa()
-    while roupa.getSize() == "":
+    while True:
         line = input()
         print("$" + line)
         args: list[str] = line.split()
@@ -24,7 +24,7 @@ def main():
         if args[0] == "end":
             break
         elif args[0] == "show":
-            print(f"size: ({roupa.getSize()})")
+            print(roupa)
         elif args[0] == "size":
             if len(args) > 1:
                 roupa.setSize(args[1])
