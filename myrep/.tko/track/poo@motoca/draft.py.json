@@ -1,0 +1,9 @@
+{
+    "patches": [
+        {
+            "label": "2025-10-14_13-53-34",
+            "content": "class Pessoa:\n    def __init__(self, nome: str):\n        self.nome = nome\n\n    def __str__(self):\n        return self.nome\nclass Moto:\n    def __init__(self):\n        self.pessoa: Pessoa | None = None\n\n    def inserir(self, pessoa: Pessoa):\n        if self.pessoa != None:\n            print(\"ja tem gente na moto\")\n            return\n        self.pessoa = pessoa\n        return False\n\n    def remover(self) -> Pessoa | None:\n        aux = self.pessoa\n        self.pessoa = None\n        return aux\n\n        moto = Moto()\n        moto.inserir(Pessoa(\"fulano\"))\n        moto.inserir(fulano)\n        print(moto.pessoa)",
+            "lines": "26"
+        }
+    ]
+}
