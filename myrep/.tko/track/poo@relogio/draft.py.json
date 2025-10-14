@@ -1,0 +1,9 @@
+{
+    "patches": [
+        {
+            "label": "2025-10-14_13-25-51",
+            "content": "class Relogio:\n    def __init__(self, hora: int, minuto: int, segundo: int):\n        self.__hora: int = hora\n        self.__min: int = minuto\n        self.__seg: int = segundo\n\n    def __str__(self):\n        return f\"{self.__hora:02d}:{self.__min:02d}:{self.__seg:02d}\"",
+            "lines": "8"
+        }
+    ]
+}

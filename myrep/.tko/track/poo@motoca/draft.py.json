@@ -2,8 +2,18 @@
     "patches": [
         {
             "label": "2025-10-14_13-53-34",
-            "content": "class Pessoa:\n    def __init__(self, nome: str):\n        self.nome = nome\n\n    def __str__(self):\n        return self.nome\nclass Moto:\n    def __init__(self):\n        self.pessoa: Pessoa | None = None\n\n    def inserir(self, pessoa: Pessoa):\n        if self.pessoa != None:\n            print(\"ja tem gente na moto\")\n            return\n        self.pessoa = pessoa\n        return False\n\n    def remover(self) -> Pessoa | None:\n        aux = self.pessoa\n        self.pessoa = None\n        return aux\n\n        moto = Moto()\n        moto.inserir(Pessoa(\"fulano\"))\n        moto.inserir(fulano)\n        print(moto.pessoa)",
+            "content": "@@ -51,26 +51,24 @@\n        self.\n-__\n nome = nome%0A\n@@ -71,119 +71,8 @@\n ome%0A\n-    def getNome(self):%0A        return self.__nome%0A    def setNome(self,value: str):%0A        self.__nome = value\n %0A   \n@@ -111,18 +111,16 @@\n rn self.\n-__\n nome%0Acla\n@@ -236,16 +236,8 @@\n soa)\n- -%3E bool\n :%0A  \n@@ -330,14 +330,8 @@\n turn\n- False\n %0A   \n@@ -371,19 +371,20 @@\n  return \n-Tru\n+Fals\n e%0A%0A    d\n@@ -422,96 +422,8 @@\n ne:%0A\n-        if self.pessoa == None:%0A            print(%22moto vazia%22)%0A            return None%0A\n     \n@@ -494,33 +494,8 @@\n aux%0A\n-        %0Adef main():     \n %0A   \n@@ -525,221 +525,68 @@\n     \n-%0A        while True:%0A            line = input()%0A            print(%22$%22 + line)%0A            args = line.split(%22 %22)%0A%0A            if args%5B0%5D == %22end%22:%0A                break%0A            elif args%5B0%5D == %22show%22:%0A        \n+moto.inserir(Pessoa(%22fulano%22))%0A        moto.inserir(fulano)%0A\n     \n@@ -603,12 +603,12 @@\n moto\n-)%0Amain(\n+.pessoa\n )\n",
             "lines": "26"
+        },
+        {
+            "label": "2025-10-14_16-57-57",
+            "content": "@@ -231,21 +231,16 @@\n .__nome%0A\n-    %0A\n class Mo\n@@ -719,74 +719,8 @@\n    %0A\n-    def __str__(self):%0A        return f%22moto: %7Bself.pessoa%7D%22%0A    %0A\n def \n",
+            "lines": "41"
+        },
+        {
+            "label": "2025-10-14_16-59-57",
+            "content": "class Pessoa:\n    def __init__(self, nome: str):\n        self.__nome = nome\n    def getNome(self):\n        return self.__nome\n    def setNome(self,value: str):\n        self.__nome = value\n    def __str__(self):\n        return self.__nome\n    \nclass Moto:\n    def __init__(self):\n        self.pessoa: Pessoa | None = None\n\n    def inserir(self, pessoa: Pessoa) -> bool:\n        if self.pessoa != None:\n            print(\"ja tem gente na moto\")\n            return False\n        self.pessoa = pessoa\n        return True\n\n    def remover(self) -> Pessoa | None:\n        if self.pessoa == None:\n            print(\"moto vazia\")\n            return None\n        aux = self.pessoa\n        self.pessoa = None\n        return aux\n        \n    def __str__(self):\n        return f\"moto: {self.pessoa}\"\n    \ndef main():     \n        moto = Moto()\n        \n        while True:\n            line = input()\n            print(\"$\" + line)\n            args = line.split(\" \")\n\n            if args[0] == \"end\":\n                break\n            elif args[0] == \"show\":\n                print(moto)\nmain()",
+            "lines": "45"
         }
     ]
 }

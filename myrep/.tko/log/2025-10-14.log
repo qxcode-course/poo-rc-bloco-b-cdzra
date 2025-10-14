@@ -5,3 +5,17 @@
 2025-10-14 13:14:52, EXEC, v:1, k:poo@roupa, mode:FULL, rate:0, size:33
 2025-10-14 13:16:46, EXEC, v:1, k:poo@roupa, mode:FULL, rate:100, size:33
 2025-10-14 13:17:40, MOVE, v:1, k:poo@roupa, mode:BACK
+2025-10-14 13:18:52, MOVE, v:1, k:poo@relogio, mode:DOWN
+2025-10-14 13:25:50, MOVE, v:1, k:poo@relogio, mode:PICK
+2025-10-14 13:25:51, EXEC, v:1, k:poo@relogio, mode:FREE, size:8
+2025-10-14 13:25:55, MOVE, v:1, k:poo@relogio, mode:BACK
+2025-10-14 16:57:55, MOVE, v:1, k:poo@motoca, mode:PICK
+2025-10-14 16:57:57, EXEC, v:1, k:poo@motoca, mode:FULL, rate:0, size:41
+2025-10-14 16:58:04, EXEC, v:1, k:poo@motoca, mode:FREE
+2025-10-14 16:58:08, EXEC, v:1, k:poo@motoca, mode:FREE
+2025-10-14 16:58:22, MOVE, v:1, k:poo@motoca, mode:BACK
+2025-10-14 16:59:57, MOVE, v:1, k:poo@motoca, mode:PICK
+2025-10-14 16:59:57, EXEC, v:1, k:poo@motoca, mode:FREE, size:45
+2025-10-14 17:00:18, MOVE, v:1, k:poo@motoca, mode:BACK
+2025-10-14 17:00:18, MOVE, v:1, k:poo@motoca, mode:PICK
+2025-10-14 17:00:19, MOVE, v:1, k:poo@motoca, mode:BACK
