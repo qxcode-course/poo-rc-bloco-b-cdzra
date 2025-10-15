@@ -1,0 +1,21 @@
+2025-10-15 13:28:27, MOVE, v:1, k:poo@relogio, mode:PICK
+2025-10-15 13:44:41, MOVE, v:1, k:poo@relogio, mode:BACK
+2025-10-15 13:58:22, MOVE, v:1, k:poo@relogio, mode:PICK
+2025-10-15 13:58:22, EXEC, v:1, k:poo@relogio, mode:FULL, rate:0, size:50
+2025-10-15 13:58:38, EXEC, v:1, k:poo@relogio, mode:FULL, rate:0, size:50
+2025-10-15 13:58:39, EXEC, v:1, k:poo@relogio, mode:FULL, rate:0
+2025-10-15 13:58:40, EXEC, v:1, k:poo@relogio, mode:FULL, rate:0
+2025-10-15 13:58:40, EXEC, v:1, k:poo@relogio, mode:FULL, rate:0
+2025-10-15 13:58:41, EXEC, v:1, k:poo@relogio, mode:FULL, rate:0
+2025-10-15 13:58:41, MOVE, v:1, k:poo@relogio, mode:BACK
+2025-10-15 13:58:43, MOVE, v:1, k:poo@relogio, mode:PICK
+2025-10-15 13:58:44, EXEC, v:1, k:poo@relogio, mode:FULL, rate:0
+2025-10-15 13:58:48, EXEC, v:1, k:poo@relogio, mode:FULL, rate:0
+2025-10-15 13:58:59, EXEC, v:1, k:poo@relogio, mode:FULL, rate:0
+2025-10-15 13:59:00, EXEC, v:1, k:poo@relogio, mode:FULL, rate:0
+2025-10-15 13:59:11, EXEC, v:1, k:poo@relogio, mode:FULL, rate:0, size:50
+2025-10-15 13:59:12, EXEC, v:1, k:poo@relogio, mode:FULL, rate:0, size:50
+2025-10-15 13:59:13, EXEC, v:1, k:poo@relogio, mode:FULL, rate:0
+2025-10-15 13:59:17, EXEC, v:1, k:poo@relogio, mode:FULL, rate:0
+2025-10-15 13:59:19, EXEC, v:1, k:poo@relogio, mode:FULL, rate:0
+2025-10-15 14:01:16, MOVE, v:1, k:poo@relogio, mode:BACK

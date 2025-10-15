@@ -7,8 +7,8 @@ sources:
   filters: null
 - database: poo
   link: https://github.com/qxcodepoo/arcade/blob/master/Readme.md
-  cache_path: C:\Users\Caduzera\poo\poo-rc-bloco-b-cdzra\myrep\.tko\cache\poo.md
-  cache_timestamp: '2025-10-14 16:57:50'
+  cache_path: /workspaces/poo-rc-bloco-b-cdzra/myrep/.tko/cache/poo.md
+  cache_timestamp: '2025-10-15 13:27:21'
   filters: null
 expanded:
 - poo@campanha-principal
@@ -20,7 +20,7 @@ flags:
   quests: 0
   tracks: 0
   tasks: 0
-  graph: 0
+  graph: 1
   xray: 0
 lang: py
-selected: poo@motoca
+selected: poo@relogio

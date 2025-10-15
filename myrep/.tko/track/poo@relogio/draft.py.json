@@ -2,8 +2,28 @@
     "patches": [
         {
             "label": "2025-10-14_13-25-51",
-            "content": "class Relogio:\n    def __init__(self, hora: int, minuto: int, segundo: int):\n        self.__hora: int = hora\n        self.__min: int = minuto\n        self.__seg: int = segundo\n\n    def __str__(self):\n        return f\"{self.__hora:02d}:{self.__min:02d}:{self.__seg:02d}\"",
+            "content": "@@ -266,919 +266,4 @@\n 2d%7D%22\n-%0A%0A    def getHora(self) -%3E int:%0A        return self.__hora%0A%0A    def getMin(self) -%3E int:%0A        return self.__min%0A%0A    def getSec(self) -%3E int:%0A        return self.__seg%0A%0A    def setHora(self,value: int):%0A        if value %3E 23 or value %3C 0:%0A            print(%22fail: hora invalido%22)%0A            return%0A        self.__hora = value%0A%0A    def setMin(self,value: int):%0A        if value %3E 59 or value %3C 0:%0A            print(%22fail: minuto invalido%22)%0A            return%0A        self.__min = value%0A%0A    def setSeg(self,value: int):%0A        if value %3E 59 or value %3C 0:%0A            print(%22fail: segundo invalido%22)%0A            return%0A        self.__seg = value%0A%0Adef main():%0A    relogio = Relogio()%0A%0A        while True:%0A            line = input()%0A            print(%22$%22 + line)%0A            args = line.split(%22 %22)%0A%0A        if args%5B0%5D == %22end%22:%0A            break%0A        elif args%5B0%5D == %22show%22:%0A            print(relogio)%0A%0Amain()  \n",
             "lines": "8"
+        },
+        {
+            "label": "2025-10-15_13-58-22",
+            "content": "@@ -1070,20 +1070,16 @@\n         \n-    \n if args%5B\n@@ -1109,20 +1109,16 @@\n   break%0A\n-    \n         \n",
+            "lines": "50"
+        },
+        {
+            "label": "2025-10-15_13-58-38",
+            "content": "@@ -1157,28 +1157,24 @@\n             \n-    \n print(relogi\n",
+            "lines": "50"
+        },
+        {
+            "label": "2025-10-15_13-59-11",
+            "content": "@@ -1107,20 +1107,16 @@\n         \n-    \n break%0A  \n",
+            "lines": "50"
+        },
+        {
+            "label": "2025-10-15_13-59-12",
+            "content": "class Relogio:\n    def __init__(self, hora: int, minuto: int, segundo: int):\n        self.__hora: int = hora\n        self.__min: int = minuto\n        self.__seg: int = segundo\n\n    def __str__(self):\n        return f\"{self.__hora:02d}:{self.__min:02d}:{self.__seg:02d}\"\n\n    def getHora(self) -> int:\n        return self.__hora\n\n    def getMin(self) -> int:\n        return self.__min\n\n    def getSec(self) -> int:\n        return self.__seg\n\n    def setHora(self,value: int):\n        if value > 23 or value < 0:\n            print(\"fail: hora invalido\")\n            return\n        self.__hora = value\n\n    def setMin(self,value: int):\n        if value > 59 or value < 0:\n            print(\"fail: minuto invalido\")\n            return\n        self.__min = value\n\n    def setSeg(self,value: int):\n        if value > 59 or value < 0:\n            print(\"fail: segundo invalido\")\n            return\n        self.__seg = value\n\ndef main():\n    relogio = Relogio()\n\n        while True:\n            line = input()\n            print(\"$\" + line)\n            args = line.split(\" \")\n\n            if args[0] == \"end\":\n                break\n            elif args[0] == \"show\":\n                print(relogio)\n\nmain()  ",
+            "lines": "50"
         }
     ]
 }

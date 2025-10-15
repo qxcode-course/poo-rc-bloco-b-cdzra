@@ -6,5 +6,45 @@ class Relogio:
 
     def __str__(self):
         return f"{self.__hora:02d}:{self.__min:02d}:{self.__seg:02d}"
-    
-    
+
+    def getHora(self) -> int:
+        return self.__hora
+
+    def getMin(self) -> int:
+        return self.__min
+
+    def getSec(self) -> int:
+        return self.__seg
+
+    def setHora(self,value: int):
+        if value > 23 or value < 0:
+            print("fail: hora invalido")
+            return
+        self.__hora = value
+
+    def setMin(self,value: int):
+        if value > 59 or value < 0:
+            print("fail: minuto invalido")
+            return
+        self.__min = value
+
+    def setSeg(self,value: int):
+        if value > 59 or value < 0:
+            print("fail: segundo invalido")
+            return
+        self.__seg = value
+
+def main():
+    relogio = Relogio()
+
+        while True:
+            line = input()
+            print("$" + line)
+            args = line.split(" ")
+
+            if args[0] == "end":
+                break
+            elif args[0] == "show":
+                print(relogio)
+
+main()  
