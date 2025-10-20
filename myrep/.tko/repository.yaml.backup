@@ -8,7 +8,7 @@ sources:
 - database: poo
   link: https://github.com/qxcodepoo/arcade/blob/master/Readme.md
   cache_path: C:\Users\Caduzera\poo\poo-rc-bloco-b-cdzra\myrep\.tko\cache\poo.md
-  cache_timestamp: '2025-10-15 13:27:21'
+  cache_timestamp: '2025-10-16 11:28:16'
   filters: null
 expanded:
 - poo@campanha-principal
@@ -24,4 +24,4 @@ flags:
   graph: 1
   xray: 0
 lang: py
-selected: poo@notebook
+selected: poo@bloco_b-agregação-simples
