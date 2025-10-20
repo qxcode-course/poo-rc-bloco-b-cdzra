@@ -2,8 +2,23 @@
     "patches": [
         {
             "label": "2025-10-15_14-19-27",
-            "content": "class Bateria:\n    def __init__(self, capacidade: int):\n        self.__capacidade: int = capacidade\n        self.__carga: int = capacidade\n\nclass Carregador:\n    def __init__(self, potencia: int):\n        self.__potencia: int = potencia\n        \nclass Notebook:\n    def __init__(self):\n        self.__ligado: bool = False\n        self.__bateria: Bateria | None = None\n",
+            "content": "@@ -1,17 +1,20 @@\n class \n-Arm\n+Bateri\n a:%0A    d\n@@ -33,351 +33,161 @@\n self\n-):%0A        self.bullet: int = 25%0A        self.bulletOut: int = 75%0A%0A    def __str__(self):%0A        return f%22Arma com %7Bself.bullet%7D, no pente ainda restam %7Bself.bulletOut%7D%22\n+, capacidade: int):%0A        self.__capacidade: int = capacidade\n %0A    \n-%0A\n     \n-def atirar(self):%0A        if self.bullet == 0:%0A            print(%22fail: sem balas%22)%0A            return%0A        self.bullet -= 1%0A%0A    def recarregar(self, decrement\n+self.__carga: int = capacidade%0A%0Aclass Carregador:%0A    def __init__(self, potencia\n : in\n@@ -202,168 +202,97 @@\n     \n-if \n self.\n-bullet == 25:%0A            print(%22fail: pente cheio%22)%0A            return%0A        if self.bullet %3C 25:%0A            decrement = 25 - self.bullet%0A  \n+__potencia: int = potencia%0A        %0Aclass Notebook:%0A    def __init__(self):%0A\n         \n   se\n@@ -291,325 +291,78 @@\n     \n-  \n self.\n-bulletOut -= decrement%0A            return%0A        self.bullet = 25%0A%0Adef main():%0A    arma = Arma()%0A    while True:%0A        line = input()%0A        print(%22$%22 + line)%0A        args: list%5Bstr%5D = line.split()%0A%0A        if args%5B0%5D == %22end%22:%0A            break%0A        elif args%5B0%5D == %22show%22:%0A            print(arma)%0A%0A%0Amain()\n+__ligado: bool = False%0A        self.__bateria: Bateria %7C None = None%0A\n",
             "lines": "13"
+        },
+        {
+            "label": "2025-10-20_14-38-47",
+            "content": "@@ -159,15 +159,18 @@\n let%7D\n- balas,\n+, no pente\n  ain\n@@ -195,25 +195,16 @@\n lletOut%7D\n- no pente\n %22%0A    %0A \n",
+            "lines": "38"
+        },
+        {
+            "label": "2025-10-20_14-39-22",
+            "content": "@@ -868,67 +868,8 @@\n ma)%0A\n-        elif args%5B0%5D == %22shoot%22:%0A            arma.atirar()%0A\n %0A%0Ama\n",
+            "lines": "38"
+        },
+        {
+            "label": "2025-10-20_14-40-22",
+            "content": "class Arma:\n    def __init__(self):\n        self.bullet: int = 25\n        self.bulletOut: int = 75\n\n    def __str__(self):\n        return f\"Arma com {self.bullet} balas, ainda restam {self.bulletOut} no pente\"\n    \n    def atirar(self):\n        if self.bullet == 0:\n            print(\"fail: sem balas\")\n            return\n        self.bullet -= 1\n\n    def recarregar(self, decrement: int):\n        if self.bullet == 25:\n            print(\"fail: pente cheio\")\n            return\n        if self.bullet < 25:\n            decrement = 25 - self.bullet\n            self.bulletOut -= decrement\n            return\n        self.bullet = 25\n\ndef main():\n    arma = Arma()\n    while True:\n        line = input()\n        print(\"$\" + line)\n        args: list[str] = line.split()\n\n        if args[0] == \"end\":\n            break\n        elif args[0] == \"show\":\n            print(arma)\n        elif args[0] == \"shoot\":\n            arma.atirar()\n\n\nmain()",
+            "lines": "40"
         }
     ]
 }
