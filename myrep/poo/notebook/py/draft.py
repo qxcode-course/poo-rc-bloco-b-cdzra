@@ -38,9 +38,9 @@ class Notebook:
         if self.__ligado == False:
             print("fail: notebook desligado")
             return
-        else:
-            self.minutos = minutos
-            return
+        self.minutos = minutos
+        print(f"Usado por {self.minutos} minutos")
+
         
 def main():
     notebook = Notebook()
@@ -58,5 +58,5 @@ def main():
         elif args[0] == "desligar":
             notebook.setDesligar()
         elif args[0] == "use":
-            print(f"Usado por {notebook.usar(args[1])} minutos")
+            notebook.usar(args[1])
 main()
