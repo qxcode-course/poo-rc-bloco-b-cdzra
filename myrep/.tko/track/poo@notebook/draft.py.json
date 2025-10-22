@@ -22,8 +22,18 @@
         },
         {
             "label": "2025-10-21_16-11-32",
-            "content": "class Bateria:\n    def __init__(self, capacidade: int):\n        self.__capacidade: int = capacidade\n        self.__carga: int = capacidade\n\nclass Carregador:\n    def __init__(self, potencia: int):\n        self.__potencia: int = potencia\n\nclass Notebook:\n    def __init__(self):\n        self.__ligado: bool = False\n\n    def getLigado(self):\n        if self.__ligado == False:\n            print(\"Status: Desligado\")\n            return\n        if self.__ligado == True:\n            print(\"Status: Ligado\")\n            return\n        \n    def setLigar(self):\n        if self.__ligado == True:\n            print(\"fail: notebook ja esta ligado\")\n            return\n        self.__ligado = True\n\n    def setDesligar(self):\n        if self.__ligado == False:\n            print(\"fail: notebook ja esta desligado\")\n            return\n        self.__ligado = False\n\ndef main():\n    notebook = Notebook()\n    while True:\n        line = input()\n        print(\"$\" + line)\n        args: list[str] = line.split()\n\n        if args[0] == \"end\":\n            break\n        elif args[0] == \"show\":\n            notebook.getLigado()\n        elif args[0] == \"ligar\":\n            notebook.setLigar\n        elif args[0] == \"desligar\":\n            notebook.setDesligar()\nmain()",
+            "content": "@@ -852,89 +852,8 @@\n se%0A%0A\n-    def usar(self, minutos: int):%0A        return f%22Usado por %7Bminutos%7D minutos%22%0A%0A\n def \n@@ -1161,26 +1161,24 @@\n ook.setLigar\n-()\n %0A        eli\n@@ -1241,74 +1241,8 @@\n r()%0A\n-        elif args%5B0%5D == %22use%22:%0A            notebook.usar(args%5B1%5D)%0A\n main\n",
             "lines": "49"
+        },
+        {
+            "label": "2025-10-22_14-10-23",
+            "content": "@@ -886,108 +886,8 @@\n t):%0A\n-        if self.__ligado == False:%0A            print(%22fail: notebook desligado%22)%0A            return%0A\n     \n",
+            "lines": "54"
+        },
+        {
+            "label": "2025-10-22_14-13-03",
+            "content": "class Bateria:\n    def __init__(self, capacidade: int):\n        self.__capacidade: int = capacidade\n        self.__carga: int = capacidade\n\nclass Carregador:\n    def __init__(self, potencia: int):\n        self.__potencia: int = potencia\n\nclass Notebook:\n    def __init__(self):\n        self.__ligado: bool = False\n\n    def getLigado(self):\n        if self.__ligado == False:\n            print(\"Status: Desligado\")\n            return\n        if self.__ligado == True:\n            print(\"Status: Ligado\")\n            return\n        \n    def setLigar(self):\n        if self.__ligado == True:\n            print(\"fail: notebook ja esta ligado\")\n            return\n        self.__ligado = True\n\n    def setDesligar(self):\n        if self.__ligado == False:\n            print(\"fail: notebook ja esta desligado\")\n            return\n        self.__ligado = False\n\n    def usar(self, minutos: int):\n        if self.__ligado == False:\n            print(\"fail: notebook desligado\")\n            return\n        return f\"Usado por {minutos} minutos\"\n\ndef main():\n    notebook = Notebook()\n    while True:\n        line = input()\n        print(\"$\" + line)\n        args: list[str] = line.split()\n\n        if args[0] == \"end\":\n            break\n        elif args[0] == \"show\":\n            notebook.getLigado()\n        elif args[0] == \"ligar\":\n            notebook.setLigar()\n        elif args[0] == \"desligar\":\n            notebook.setDesligar()\n        elif args[0] == \"use\":\n            notebook.usar(args[1])\nmain()",
+            "lines": "57"
         }
     ]
 }
