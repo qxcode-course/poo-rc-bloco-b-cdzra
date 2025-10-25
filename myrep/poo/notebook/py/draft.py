@@ -27,7 +27,7 @@ class Carregador:
         return self.__potencia
 
 class Notebook:
-    def __init__(self):
+    def __init__(self, minutos : int = 0 ):
         self.__ligado: bool = False
         self.__bateria: Bateria  | None = None
         self.__carregador: Carregador | None = None
