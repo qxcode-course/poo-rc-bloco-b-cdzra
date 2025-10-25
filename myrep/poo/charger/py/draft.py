@@ -32,20 +32,33 @@ class Notebook:
         self.__bateria: Bateria  | None = None
         self.__carregador: Carregador | None = None
 
-    def status(self):
+    def status(self, minutos: int):
         if self.__ligado == True:
             status = "ligado"
+            if self.__bateria:
+                print(f"Notebook: {status} por {minutos} minutos, bateria: {self.__bateria.getBateria()}")
+                return
+            if self.__carregador:
+                print(f"Notebook: {status} por {minutos} minutos, Carregador {self.__carregador.getPotencia()}W")
+                return
+            if self.__bateria and self.__carregador:
+                print(f"Notebook: {status} por {minutos} minutos, Bateria: {self.__bateria.getBateria()}, Carregador {self.__carregador.getPotencia()}W")
+                return
+            else:
+                print(f"Notebook: {status} por {minutos} minutos")
         else:
             status = "desligado"
-        print(f"Notebook: {status}")
-        if self.__bateria:
-            print(f"bateria: {self.__bateria.getBateria()}")
-        else:
-            print("bateria: none")
-        if self.__carregador:
-            print(f"carregador: {self.__carregador.getPotencia()}W")
-        else:
-            print("carregador: none")
+            if self.__bateria:
+                print(f"Notebook: {status}, bateria: {self.__bateria.getBateria()}")
+                return
+            if self.__carregador:
+                print(f"Notebook: {status}, Carregador {self.__carregador.getPotencia()}W")
+                return
+            if self.__bateria and self.__carregador:
+                print(f"Notebook: {status}, Bateria: {self.__bateria.getBateria()}, Carregador {self.__carregador.getPotencia()}W")
+                return
+            else:
+                print(f"Notebook: {status}")
         
     def setLigar(self):
         if self.__bateria and self.__bateria.temCarga():
@@ -54,10 +67,9 @@ class Notebook:
             return
         if self.__carregador:
             self.__ligado = True
-            print("msg: notebook ligado pelo carregador")
             return
         else:
-            print("fail: notebook sem bateria ou carregador")
+            print("fail: não foi possível ligar")
 
     def setDesligar(self):
         if self.__ligado == False:
@@ -68,7 +80,7 @@ class Notebook:
 
     def usar(self, minutos: int):
         if self.__ligado == False:
-            print("fail: ligue o notebook primeiro")
+            print("fail: desligado")
             return
         if self.__bateria == None and self.__carregador == None:
             print("fail: sem bateria e sem carregador")
@@ -98,7 +110,6 @@ class Notebook:
 
     def setCarregador(self, carregador: Carregador):
         self.__carregador = carregador
-        print("msg: carregador conectado")
 
     def removeCarregador(self):
         if self.__carregador:
@@ -129,13 +140,13 @@ def main():
             notebook.setBateria(bateria)
         elif args[0] == "removeBateria":
             notebook.removeBateria()
-        elif args[0] == "carregador":
+        elif args[0] == "set_charger":
             potencia = int(args[1])
             carregador = Carregador(potencia)
             notebook.setCarregador(carregador)
         elif args[0] == "removeCarregador":
             notebook.removeCarregador()
-        elif args[0] == "ligar":
+        elif args[0] == "turn_on":
             notebook.setLigar()
         elif args[0] == "desligar":
             notebook.setDesligar()

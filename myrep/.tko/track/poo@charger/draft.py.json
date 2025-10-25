@@ -1,0 +1,74 @@
+{
+    "patches": [
+        {
+            "label": "2025-10-24_23-41-30",
+            "content": "@@ -1177,24 +1177,73 @@\n ateria()%7D%22)%0A\n+        else:%0A            print(%22bateria: none%22)%0A\n         if s\n@@ -1329,16 +1329,68 @@\n a()%7DW%22)%0A\n+        else:%0A            print(%22carregador: none%22)%0A\n         \n",
+            "lines": "145"
+        },
+        {
+            "label": "2025-10-24_23-42-36",
+            "content": "@@ -1648,28 +1648,40 @@\n l: n\n-ao foi possivel liga\n+otebook sem bateria ou carregado\n r%22)%0A\n",
+            "lines": "141"
+        },
+        {
+            "label": "2025-10-24_23-44-41",
+            "content": "@@ -1648,9 +1648,9 @@\n l: n\n-%C3%A3\n+a\n o fo\n@@ -1659,9 +1659,9 @@\n poss\n-%C3%AD\n+i\n vel \n@@ -4149,15 +4149,13 @@\n == %22\n-turn_on\n+ligar\n %22:%0A \n",
+            "lines": "141"
+        },
+        {
+            "label": "2025-10-24_23-45-53",
+            "content": "@@ -1970,24 +1970,40 @@\n (%22fail: \n-desligad\n+ligue o notebook primeir\n o%22)%0A    \n",
+            "lines": "141"
+        },
+        {
+            "label": "2025-10-24_23-46-26",
+            "content": "@@ -1140,36 +1140,16 @@\n print(f%22\n-Notebook: %7Bstatus%7D, \n bateria:\n@@ -1235,207 +1235,9 @@\n t(f%22\n-Notebook: %7Bstatus%7D, carregador: %7Bself.__carregador.getPotencia()%7DW%22)%0A        if self.__bateria and self.__carregador:%0A            print(f%22Notebook: %7Bstatus%7D, Bateria: %7Bself.__bateria.getBateria()%7D, C\n+c\n arre\n",
+            "lines": "141"
+        },
+        {
+            "label": "2025-10-25_11-18-11",
+            "content": "@@ -4100,18 +4100,17 @@\n == %22\n-set_charge\n+carregado\n r%22:%0A\n",
+            "lines": "143"
+        },
+        {
+            "label": "2025-10-25_11-18-56",
+            "content": "@@ -3254,16 +3254,59 @@\n rregador\n+%0A        print(%22msg: carregador conectado%22)\n %0A%0A    de\n",
+            "lines": "143"
+        },
+        {
+            "label": "2025-10-25_11-19-38",
+            "content": "@@ -1048,32 +1048,69 @@\n s = %22desligado%22%0A\n+        print(f%22Notebook: %7Bstatus%7D%22)%0A\n         if self.\n@@ -1502,63 +1502,8 @@\n W%22)%0A\n-        else:%0A            print(f%22Notebook: %7Bstatus%7D%22)%0A\n     \n",
+            "lines": "142"
+        },
+        {
+            "label": "2025-10-25_11-21-59",
+            "content": "@@ -1234,17 +1234,17 @@\n tatus%7D, \n-C\n+c\n arregado\n",
+            "lines": "143"
+        },
+        {
+            "label": "2025-10-25_11-22-29",
+            "content": "@@ -1236,32 +1236,33 @@\n tus%7D, Carregador\n+:\n  %7Bself.__carrega\n@@ -1422,16 +1422,17 @@\n rregador\n+:\n  %7Bself._\n",
+            "lines": "143"
+        },
+        {
+            "label": "2025-10-25_11-22-45",
+            "content": "@@ -1164,35 +1164,16 @@\n ia()%7D%22)%0A\n-            return%0A\n         \n@@ -1282,35 +1282,16 @@\n a()%7DW%22)%0A\n-            return%0A\n         \n@@ -1463,35 +1463,34 @@\n W%22)%0A        \n-    return%0A\n+else:%0A    \n         prin\n",
+            "lines": "143"
+        },
+        {
+            "label": "2025-10-25_11-24-16",
+            "content": "@@ -1792,32 +1792,90 @@\n __ligado = True%0A\n+            print(%22msg: notebook ligado pelo carregador%22)%0A\n             retu\n",
+            "lines": "145"
+        },
+        {
+            "label": "2025-10-25_11-26-00",
+            "content": "@@ -938,38 +938,24 @@\n  status(self\n-, minutos: int\n ):%0A        i\n@@ -1013,655 +1013,8 @@\n do%22%0A\n-            if self.__bateria:%0A                print(f%22Notebook: %7Bstatus%7D por %7Bminutos%7D minutos, bateria: %7Bself.__bateria.getBateria()%7D%22)%0A                return%0A            if self.__carregador:%0A                print(f%22Notebook: %7Bstatus%7D por %7Bminutos%7D minutos, Carregador %7Bself.__carregador.getPotencia()%7DW%22)%0A                return%0A            if self.__bateria and self.__carregador:%0A                print(f%22Notebook: %7Bstatus%7D por %7Bminutos%7D minutos, Bateria: %7Bself.__bateria.getBateria()%7D, Carregador %7Bself.__carregador.getPotencia()%7DW%22)%0A                return%0A            else:%0A                print(f%22Notebook: %7Bstatus%7D por %7Bminutos%7D minutos%22)%0A\n     \n@@ -1052,28 +1052,24 @@\n %22desligado%22%0A\n-    \n         if s\n@@ -1087,36 +1087,32 @@\n ia:%0A            \n-   \n- \n print(f%22Notebook\n@@ -1172,39 +1172,31 @@\n             \n-    \n return%0A\n-    \n         if s\n@@ -1217,36 +1217,32 @@\n or:%0A            \n-  \n-  \n print(f%22Notebook\n@@ -1309,39 +1309,31 @@\n             \n-    \n return%0A\n-    \n         if s\n@@ -1373,36 +1373,32 @@\n or:%0A            \n- \n-   \n print(f%22Notebook\n@@ -1513,45 +1513,15 @@\n     \n-    \n return%0A\n-            else:%0A        \n     \n",
+            "lines": "144"
+        },
+        {
+            "label": "2025-10-25_11-36-22",
+            "content": "class Bateria:\n    def __init__(self, capacidade: int):\n        self.__capacidade: int = capacidade\n        self.__carga: int = capacidade\n\n    def getBateria(self):\n        return f\"{self.__carga}/{self.__capacidade}\"\n    \n    def usar(self, minutos: int):\n        self.__carga -= minutos\n        if self.__carga < 0:\n            self.__carga = 0\n\n    def carregar(self, potencia: int, minutos: int):\n        self.__carga += potencia * minutos\n        if self.__carga > self.__capacidade:\n            self.__carga = self.__capacidade\n\n    def temCarga(self):\n        return self.__carga > 0\n    \nclass Carregador:\n    def __init__(self, potencia: int):\n        self.__potencia: int = potencia\n\n    def getPotencia(self):\n        return self.__potencia\n\nclass Notebook:\n    def __init__(self):\n        self.__ligado: bool = False\n        self.__bateria: Bateria  | None = None\n        self.__carregador: Carregador | None = None\n\n    def status(self, minutos: int):\n        if self.__ligado == True:\n            status = \"ligado\"\n            if self.__bateria:\n                print(f\"Notebook: {status} por {minutos} minutos, bateria: {self.__bateria.getBateria()}\")\n                return\n            if self.__carregador:\n                print(f\"Notebook: {status} por {minutos} minutos, Carregador {self.__carregador.getPotencia()}W\")\n                return\n            if self.__bateria and self.__carregador:\n                print(f\"Notebook: {status} por {minutos} minutos, Bateria: {self.__bateria.getBateria()}, Carregador {self.__carregador.getPotencia()}W\")\n                return\n            else:\n                print(f\"Notebook: {status} por {minutos} minutos\")\n        else:\n            status = \"desligado\"\n            if self.__bateria:\n                print(f\"Notebook: {status}, bateria: {self.__bateria.getBateria()}\")\n                return\n            if self.__carregador:\n                print(f\"Notebook: {status}, Carregador {self.__carregador.getPotencia()}W\")\n                return\n            if self.__bateria and self.__carregador:\n                print(f\"Notebook: {status}, Bateria: {self.__bateria.getBateria()}, Carregador {self.__carregador.getPotencia()}W\")\n                return\n            else:\n                print(f\"Notebook: {status}\")\n        \n    def setLigar(self):\n        if self.__bateria and self.__bateria.temCarga():\n            self.__ligado = True\n            print(\"msg: notebook ligado\")\n            return\n        if self.__carregador:\n            self.__ligado = True\n            return\n        else:\n            print(\"fail: n\u00e3o foi poss\u00edvel ligar\")\n\n    def setDesligar(self):\n        if self.__ligado == False:\n            print(\"fail: notebook ja esta desligado\")\n            return\n        self.__ligado = False\n        print(\"msg: notebook desligado\")\n\n    def usar(self, minutos: int):\n        if self.__ligado == False:\n            print(\"fail: desligado\")\n            return\n        if self.__bateria == None and self.__carregador == None:\n            print(\"fail: sem bateria e sem carregador\")\n            self.__ligado = False\n            return\n        print(f\"Usado por {minutos} minutos\")\n        if self.__bateria and self.__carregador:\n            self.__bateria.carregar(self.__carregador.getPotencia(), minutos)\n            return\n        if self.__bateria and not self.__carregador:\n            self.__bateria.usar(minutos)\n            if not self.__bateria.temCarga():\n                print(\"fail: bateria zerada, notebook desligado\")\n                self.__ligado = False\n\n    def setBateria(self,bateria: Bateria):\n        self.__bateria = bateria\n        print(\"msg: bateria conectada\")\n\n    def removeBateria(self):\n        if self.__bateria:\n            self.__bateria = None\n            print(\"msg: bateria removida\")\n            return\n        else:\n            print(\"fail: sem bateria conectada\")\n\n    def setCarregador(self, carregador: Carregador):\n        self.__carregador = carregador\n\n    def removeCarregador(self):\n        if self.__carregador:\n            self.__carregador = None\n            print(\"msg: carregador removida\")\n            return\n        else:\n            print(\"fail: sem carregador conectado\")\n    \n\n        \ndef main():\n    notebook = Notebook()\n    bateria = None\n    carregador = None\n    while True:\n        line = input()\n        print(\"$\" + line)\n        args: list[str] = line.split()\n\n        if args[0] == \"end\":\n            break\n        elif args[0] == \"show\":\n            notebook.status()\n        elif args[0] == \"bateria\":\n            capacidade = int(args[1])\n            bateria = Bateria(capacidade)\n            notebook.setBateria(bateria)\n        elif args[0] == \"removeBateria\":\n            notebook.removeBateria()\n        elif args[0] == \"set_charger\":\n            potencia = int(args[1])\n            carregador = Carregador(potencia)\n            notebook.setCarregador(carregador)\n        elif args[0] == \"removeCarregador\":\n            notebook.removeCarregador()\n        elif args[0] == \"turn_on\":\n            notebook.setLigar()\n        elif args[0] == \"desligar\":\n            notebook.setDesligar()\n        elif args[0] == \"use\":\n            minutos = int(args[1])\n            notebook.usar(minutos)\nmain()",
+            "lines": "156"
+        }
+    ]
+}
