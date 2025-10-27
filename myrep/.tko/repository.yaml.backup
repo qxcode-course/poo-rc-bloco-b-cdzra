@@ -8,7 +8,7 @@ sources:
 - database: poo
   link: https://github.com/qxcodepoo/arcade/blob/master/Readme.md
   cache_path: C:\Users\Caduzera\poo\poo-rc-bloco-b-cdzra\myrep\.tko\cache\poo.md
-  cache_timestamp: '2025-10-27 08:52:49'
+  cache_timestamp: '2025-10-27 10:57:13'
   filters: null
 expanded:
 - poo@campanha-principal
@@ -26,4 +26,4 @@ flags:
   graph: 1
   xray: 0
 lang: py
-selected: poo@motouber
+selected: poo@grafite
