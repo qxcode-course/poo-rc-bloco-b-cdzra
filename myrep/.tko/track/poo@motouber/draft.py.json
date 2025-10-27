@@ -1,0 +1,29 @@
+{
+    "patches": [
+        {
+            "label": "2025-10-27_08-52-55",
+            "content": "@@ -1691,502 +1691,8 @@\n     \n-%0A\n     \n-def __str__(self):%0A            return f%22Cost: %7Bself.__custo%7D, Driver: %7Bself.__motorista%7D, Passenger: %7Bself.__passageiro%7D%22%0A    %0Adef main():%0A    moto = Moto()%0A    while True:%0A        line = input()%0A        print(%22$%22 + line)%0A        args: list%5Bstr%5D = line.split()%0A%0A        if args%5B0%5D == %22end%22:%0A            break%0A        elif args%5B0%5D == %22show%22:%0A            print(moto)%0A        elif args%5B0%5D == %22setDriver%22:%0A            motorista = Pessoa(args%5B1%5D, int(args%5B2%5D))%0A            moto.setDriver(motorista)\n",
+            "lines": "59"
+        },
+        {
+            "label": "2025-10-27_09-04-11",
+            "content": "@@ -2189,335 +2189,4 @@\n sta)\n-%0A        elif args%5B0%5D == %22setPass%22:%0A            passageiro = Pessoa(args%5B1%5D, int(args%5B2%5D))%0A            moto.setPass(passageiro)%0A        elif args%5B0%5D == %22drive%22:%0A            km = int(args%5B1%5D)%0A            moto.drive(km)%0A        elif args%5B0%5D == %22leavePass%22:%0A            pessoa = moto.left()%0A            print(f%22%7Bpessoa%7D left%22)%0Amain()%0A\n",
+            "lines": "76"
+        },
+        {
+            "label": "2025-10-27_09-10-56",
+            "content": "@@ -2114,18 +2114,22 @@\n moto\n-.setDriver\n+rista = Pessoa\n (arg\n@@ -2140,32 +2140,70 @@\n , int(args%5B2%5D))%0A\n+            moto.setDriver(motorista)%0A\n         elif arg\n@@ -2237,20 +2237,27 @@\n     \n-moto.setPass\n+passageiro = Pessoa\n (arg\n@@ -2268,32 +2268,69 @@\n , int(args%5B2%5D))%0A\n+            moto.setPass(passageiro)%0A\n         elif arg\n",
+            "lines": "86"
+        },
+        {
+            "label": "2025-10-27_09-13-22",
+            "content": "@@ -1418,17 +1418,16 @@\n eiro() %3C\n-=\n  0:%0A    \n",
+            "lines": "84"
+        },
+        {
+            "label": "2025-10-27_09-14-10",
+            "content": "class Pessoa:\n    def __init__(self, nome: str, dinheiro: int):\n        self.__nome = nome\n        self.__dinheiro = dinheiro\n\n    def getNome(self):\n        return self.__nome\n    \n    def getDinheiro(self):\n        return self.__dinheiro\n    \n    def pagar(self, value: int):\n        if value > self.__dinheiro:\n            self.__dinheiro = 0\n            return\n        self.__dinheiro -= value\n\n    def receber(self, value: int):\n        self.__dinheiro += value\n\n    def __str__(self):\n        return f\"{self.__nome}:{self.__dinheiro}\"\n    \n    def setDinheiro(self, dinheiro:int) -> None:\n        self.__dinheiro = dinheiro\n\nclass Moto:\n    def __init__(self):\n        self.__custo = 0\n        self.__passageiro = None\n        self.__motorista = None\n\n    def setDriver(self, nome: str, dinheiro: int):\n        self.__motorista = Pessoa(nome, dinheiro)\n\n    def setPass(self, nome: str, dinheiro: int):\n        if self.__motorista == None:\n            print(\"fail: no driver in the moto\")\n            return\n        self.__passageiro = Pessoa(nome, dinheiro)\n\n    def drive(self, km: int):\n        if self.__passageiro == None:\n            print(\"fail: no passenger in the moto\")\n            return\n        self.__custo += km\n\n    def left(self):\n        if self.__passageiro != None:\n            aux = self.__passageiro\n            self.__passageiro.pagar(self.__custo)\n            if self.__passageiro.getDinheiro() <= 0:\n                self.__passageiro.setDinheiro(0)\n                print(\"fail: Passenger does not have enough money\")\n            self.__motorista.receber(self.__custo)\n            self.__custo = 0\n            self.__passageiro = None\n            return aux\n        \n    def __str__(self):\n            return f\"Cost: {self.__custo}, Driver: {self.__motorista}, Passenger: {self.__passageiro}\"\n    \ndef main():\n    moto = Moto()\n    while True:\n        line = input()\n        print(\"$\" + line)\n        args: list[str] = line.split()\n\n        if args[0] == \"end\":\n            break\n        elif args[0] == \"show\":\n            print(moto)\n        elif args[0] == \"setDriver\":\n            moto.setDriver(args[1], int(args[2]))\n        elif args[0] == \"setPass\":\n            moto.setPass(args[1], int(args[2]))\n        elif args[0] == \"drive\":\n            km = int(args[1])\n            moto.drive(km)\n        elif args[0] == \"leavePass\":\n            pessoa = moto.left()\n            print(f\"{pessoa} left\")\nmain()\n",
+            "lines": "84"
+        }
+    ]
+}
