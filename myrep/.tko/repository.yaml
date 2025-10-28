@@ -7,8 +7,8 @@ sources:
   filters: null
 - database: poo
   link: https://github.com/qxcodepoo/arcade/blob/master/Readme.md
-  cache_path: C:\Users\Caduzera\poo\poo-rc-bloco-b-cdzra\myrep\.tko\cache\poo.md
-  cache_timestamp: '2025-10-27 10:57:13'
+  cache_path: /workspaces/poo-rc-bloco-b-cdzra/myrep/.tko/cache/poo.md
+  cache_timestamp: '2025-10-28 13:14:44'
   filters: null
 expanded:
 - poo@campanha-principal
@@ -20,6 +20,7 @@ tasks:
   poo@motoca: '{rate:100}'
   poo@grafite: '{rate:100}'
   poo@motouber: '{rate:100}'
+  poo@charger: '{rate:100}'
 flags:
   quests: 0
   tracks: 0
@@ -27,4 +28,4 @@ flags:
   graph: 1
   xray: 0
 lang: py
-selected: poo@grafite
+selected: poo@charger
